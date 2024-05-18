@@ -6,7 +6,7 @@ const configDB: Options = {
     database: DATABASE,
     username: DATABASE_USER,
     password: DATABASE_PASSWORD,
-    host: '26.170.75.15',
+    host: 'localhost',
     dialect: 'mysql', 
     port: 3001
 };

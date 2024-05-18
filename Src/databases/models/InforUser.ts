@@ -1,36 +1,41 @@
 import {Sequelize, DataTypes } from 'sequelize';
 import DbUser from '../DbUser';
+import User from './users';
 
 const _db = new DbUser().getSequelize();
 
-const User = _db.define('user', {
+const InfoUser = _db.define('inforUser', {
     id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: DataTypes.INTEGER, 
+        type: DataTypes.INTEGER // Deve ser INTEGER para autoIncrement
     },
-    Nome: {
+    Apelido: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    SobreNome: {
+    Genero: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    Senha: {
+    Altura: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    Email: {
+    Peso: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
-
+    },
+    Idade: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,}
 },{
     timestamps:false
 });
 
-
-
-export default User;
+export default InfoUser;
